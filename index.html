@@ -178,24 +178,64 @@
 	    <strong>Sonobi</strong>
 	    <ul>
 	      <li>
+	        <strong>Dynamix</strong>
 	        <ul>
-	          <li>Created “Warehouser” orchestration for 5–10 events per ad impression.</li>
-	          <li>Web scraping using BeautifulSoup, Requests, Wireshark; no JS spoofing.</li>
-	          <li>Implemented probabilistic group overlap with MinHash and HyperLogLog.</li>
-	          <li>Led load/chaos testing; walked out of AWS to SaltStack-managed on-prem, cutting cost per impression by 10×.</li>
+	          <li>Developed an advanced web scraping and automation framework to collect bid pricing and market data across external platforms.</li>
+	          <li>Leveraged Python, BeautifulSoup, and Requests for HTML parsing and API interaction.</li>
+	          <li>Employed Wireshark and diagnostic tools to reverse engineer and validate undocumented APIs.</li>
+	        </ul>
+	      </li>
+	      <li>
+	        <strong>Warehouser</strong>
+	        <ul>
+	          <li>Built a data warehousing pipeline to aggregate impression-level data across campaigns.</li>
+	          <li>Designed data models to account for 5–10 log events per impression, improving granularity of reporting and optimization.</li>
+	          <li>Used PostgreSQL and Python for ETL, supported by robust logging and validation pipelines.</li>
+	        </ul>
+	      </li>
+	      <li>
+	        <strong>Probabilistic Group Overlap Estimation</strong>
+	        <ul>
+	          <li>Designed a system to estimate overlap between large user groups using probabilistic data structures.</li>
+	          <li>Combined HyperLogLog and MinHash sketches to approximate intersections on ingestion for efficient lookups.</li>
+	          <li>Used Python and NumPy, with extensive unit testing to ensure statistical confidence bounds.</li>
 	        </ul>
 	      </li>
 	    </ul>
+	    <p><strong>Technologies:</strong> Python, BeautifulSoup, Requests, PostgreSQL, HyperLogLog, MinHash, NumPy, Wireshark</p>
 	  </li>
 	  <li>
 	    <strong>Neher Data Systems</strong>
 	    <ul>
 	      <li>
+	        <h4>NJ State Campaign Dashboard</h4>
 	        <ul>
-	          <li>Architected end-to-end cloud microservices for video analytics using ECS, Lambda, S3.</li>
-	          <li>Released GhostHunter mobile app with in-app purchases to invoke AWS Lambda models.</li>
-	          <li>Provided technical leadership across client projects and internal ML pipelines.</li>
+	          <li>Developed and deployed a political data dashboard used by the NJ state campaign team to track canvassing progress, voter targeting, and engagement metrics in real-time.</li>
+	          <li>Integrated location-based visualizations using Leaflet and D3 to represent outreach efforts across the state.</li>
+	          <li>Built a custom backend with Flask and PostgreSQL, including voter file ingestion and address normalization routines.</li>
 	        </ul>
+	        <p><strong>Technologies:</strong> Python, Flask, PostgreSQL, Leaflet, D3.js, Docker</p>
+	      </li>
+	      <li>
+	        <h4>Ghost Hunter</h4>
+	        <ul>
+	          <li>Created an iOS-based augmented reality game for ghost hunting using Apple's ARKit and CoreLocation APIs.</li>
+	          <li>Added in-app purchases to unlock premium features including real-time AWS Lambda integration for AI-generated ghost models.</li>
+	          <li>Handled client-server communication and game state sync using Firebase.</li>
+	        </ul>
+	        <p><strong>Technologies:</strong> Swift, ARKit, CoreLocation, Firebase, AWS Lambda, StoreKit</p>
+	      </li>
+	      <li>
+	        <h4>Transit Authority Train Project (Bid Not Selected)</h4>
+	        <ul>
+	          <li>Partnered with the New Jersey Transit Authority to prototype a system for monitoring <strong>passenger and operator behavior</strong> using <strong>RTSP video streams</strong> from onboard train cameras.</li>
+	          <li>Developed a <strong>proof-of-concept ingestion pipeline</strong> and <strong>dashboard mockup</strong> to demonstrate potential for <strong>real-time safety analytics</strong>.</li>
+	          <li>Explored detection of behaviors such as <strong>driver distraction</strong>, <strong>passenger incidents</strong>, and <strong>unauthorized access</strong> using <strong>AWS Rekognition</strong> and <strong>SageMaker</strong> for model experimentation.</li>
+	          <li>Delivered an early prototype capable of <strong>processing multiple RTSP feeds</strong> and visualizing key events, supporting bid proposal development.</li>
+	          <li>Designed to run in containerized environments leveraging <strong>AWS Elastic Container Service (ECS)</strong> for orchestration and scalability.</li>
+	          <li>Leveraged <strong>Amazon Keyspaces</strong> for scalable NoSQL storage of video event metadata and <strong>Amazon S3</strong> for snapshot archiving and training datasets.</li>
+	        </ul>
+	        <p><strong>Technologies:</strong> Flask, OpenCV, RTSP, Docker, AWS Rekognition, AWS SageMaker, AWS ECS, Amazon Keyspaces, Amazon S3, React (mockup), PostgreSQL</p>
 	      </li>
 	    </ul>
 	  </li>
