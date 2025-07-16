@@ -37,209 +37,157 @@
     <li><strong>Leadership, Mentorship & Communication:</strong> Experienced engineering manager and technical leader with a strong background in team building, mentorship, and cross-functional execution. At HERE, grew the Capture Systems Software team from 2 to 15 engineers, structuring it into multiple subteams (frontend, mobile/tablet, backend, DevOps, and embedded) to support a wide range of autonomous driving projects. Served as architect and IC across backend, DevOps, and embedded systems while leading people and delivery. At Uber, built the Location Platform team from the ground up, making key hires who continue to thrive in senior roles. Played key roles in cross-org collaboration and alignment efforts at both companies, coordinating closely with platform, data, and product teams to deliver complex, multi-stakeholder infrastructure. Former undergraduate instructor and curriculum designer with experience developing and teaching lab-driven STEM courses. Skilled in aligning technical vision, mentoring engineers, and scaling team culture and process.</li>
   </ul>
 	<h2>Projects</h2>
-	<ul>
-	  <li>
-	    <strong>Uber</strong>
-	    <ul>
-	      <li>
-	        <strong>Navigation</strong>
-	        <ul>
-	          <li>Contributed to one of Uber’s largest backend services (approximately 10,000 nodes per data center), powering all routing and mapping across Uber apps.</li>
-	          <li>Introduced support for off-route cross-street links to the route object to improve on-device map matching, reducing average off-route detection time from several minutes to seconds in challenging urban scenarios.</li>
-	          <li>Added support in the navigation engine for treating "off-route" links with the same heuristics as on-route links; a match on an off-route link triggers rerouting faster.</li>
-	          <li>Wrote Python-based simulation tools to test route deviation detection at scale, increasing simulation capacity from 500 to 10,000 trips per run.</li>
-	          <li>Maintained the transpilation system (J2ObjC) to share Java-based routing logic with the iOS app.</li>
-	          <li>Participated in on-call rotations and postmortem analysis for critical failures; notably diagnosed a widespread issue caused by a GPS clock patch with an incorrect offset that affected a large number of devices, successfully isolating the root cause and coordinating a mitigation plan.</li>
-	          <li><strong>Technologies:</strong> Java, J2ObjC, Python, Android, iOS, Multiprocessing, GPS, Sensor Fusion, Map Matching, Routing Engines</li>
-	        </ul>
-	      </li>
-	      <li>
-	        <strong>Location Platform</strong>
-	        <ul>
-	          <li>Led the Location Platform team, increasing successful GPS + sensor data ingestion from ~80% to over 97% across global drivers.</li>
-	          <li>Built the foundation for GDPR-compliant location collection, later enabling features like rider-driver location sharing to improve the pickup experience (<a href="https://www.uber.com/newsroom/turning-on-the-lights/">Uber blog</a>).</li>
-	          <li>Ensured accurate crash detection and Uber’s “RideCheck” safety features by improving data reliability (<a href="https://www.uber.com/blog/ridecheck/">RideCheck blog</a>).</li>
-	          <li>Launched the ShadowMaps project to improve location precision in urban canyons using multipath-aware geospatial correction (<a href="https://www.uber.com/blog/shadowmaps/">ShadowMaps blog</a>).</li>
-	          <li>Oversaw Uber’s anti-location-fraud efforts, saving over $30M through improved spoofing detection and resolution workflows.</li>
-	          <li>Scaled the Cassandra infrastructure for location data to support global ingestion.</li>
-	          <li>Maintained Location Store, one of the highest QPS services at Uber, operating at “ping scale” (0.5 Hz from every active driver), processing between 2–10 million QPS.</li>
-	          <li><strong>Technologies:</strong> Python, Cassandra, Kafka, Thrift, H3, S2, Protobuf, Distributed Systems, Real-Time Location, Privacy Compliance, Geospatial Analytics</li>
-	        </ul>
-	      </li>
-	      <li>
-	        <strong>Python Platform</strong>
-	        <ul>
-	          <li>Founding engineer for Python Platform team; supported Python development across Uber Engineering and Data Science orgs.</li>
-	          <li>Provided mentorship and Slack-based office hours to engineers company-wide for debugging, performance tuning, and compatibility issues.</li>
-	          <li>Led Uber’s Python 2 to 3 migration; created dependency graph for all microservices, prioritized and updated top 200 dependencies impacting &gt;90% of production services.</li>
-	          <li>Major contributor to <a href="https://github.com/uber/tchannel-python">tchannel-python</a>, an open source Tornado-based Thrift RPC transport library.</li>
-	          <li><strong>Technologies:</strong> Python 2.7–3.x, Tornado, TChannel, Thrift, Dependency Management, Refactoring, Distributed Systems, Open Source Collaboration</li>
-	        </ul>
-	      </li>
-	      <li>
-	        <strong>Postmates Integration</strong>
-	        <ul>
-	          <li>Maintained all legacy Postmates systems during the integration phase following the acquisition, including extended on-call support to ensure service continuity.</li>
-	          <li>Contributed to integration of Postmates customer identity data to support data deletion for users who had not yet linked their Postmates and Uber accounts.</li>
-	          <li>Worked with Go and Uber's internal schemaless datastore to manage identity and compliance data flows.</li>
-	          <li><strong>Technologies:</strong> Go, Schemaless, Identity Systems, Data Deletion Compliance, System Integration, Legacy System Maintenance</li>
-	        </ul>
-	      </li>
-	    </ul>
-	  </li>
-	  <li>
-	    <strong>Postmates</strong>
-	    <ul>
-	      <li>
-	        <strong>Python 2 to 3 migration at scale in production</strong>
-	        <ul>
-	          <li>Led Python 2 to 3 migration for Postmates' monorepo, ensuring compatibility across a large, interdependent codebase.</li>
-	          <li>Enhanced distributed test infrastructure by orchestrating test jobs across Kubernetes pods, reducing average CI build times from 40–50 minutes to 10–15 minutes.</li>
-	          <li>Worked closely with infrastructure and observability teams to improve deployment quality, integrating tools like Envoy for traffic proxying and OpenTelemetry for tracing instrumentation.</li>
-	          <li>Contributed to debugging and refinement of production microservices in high-traffic, latency-sensitive systems.</li>
-	          <li>Participated in deep on-call rotations and postmortem investigations, contributing to root cause analysis and service reliability improvements across production infrastructure.</li>
-	          <li><strong>Technologies:</strong> Python 2.7–3.x, Kubernetes, Docker, Envoy, OpenTelemetry, Prometheus, Grafana, GitLab CI, Monorepo Architecture, Distributed Systems, PostgreSQL, pgpool-II, PgBouncer, Django</li>
-	        </ul>
-	      </li>
-	    </ul>
-	  </li>
-	  <li>
-	    <strong>HERE Technologies</strong>
-	    <ul>
-      <li>
-        <h4>Leadership and Team Building</h4>
-        <ul>
-          <li>Built and scaled a high-performing engineering team from 2 to 15, structuring around backend, frontend, embedded, mobile, and DevOps domains.</li>
-          <li>Led team across multiple focus areas including in-car platforms, API design, infrastructure, and visualization.</li>
-          <li>Provided architectural leadership and technical mentorship across projects while acting as people manager.</li>
-          <li>Supported efforts to obtain ISO 9001 certification across the organization, including quality management system implementation and process documentation.</li>
-          <li>Facilitated Agile engineering practices including Scrum of Scrums, quarterly release trains, and cross-team planning ceremonies to drive delivery and iterative improvement.</li>
-        </ul>
-        <p><strong>Skills:</strong> Agile, Lean Six Sigma, ISO Certification, Technical Leadership, Organizational Scaling</p>
-      </li>
-      <li>
-        <strong>Fleetvision 2</strong>
-        <ul>
-          <li>Developed Tornado-based backend APIs to interface with the in-vehicle software stack.</li>
-          <li>Built a React-based frontend for tablet interface used by fleet drivers and engineers to monitor collection progress and manage configurations.</li>
-          <li>Integrated real-time vehicle data including GPS, IMU, and camera telemetry for high-fidelity fleet tracking.</li>
-          <li>Deployment pipeline built using Jenkins and Ansible to support over-the-air software updates and remote diagnostics.</li>
-        </ul>
-        <p><strong>Technologies:</strong> Python, React, Tornado, PostgreSQL, SQLAlchemy, PostGIS, Redis, Elasticsearch</p>
-      </li>
-      <li>
-        <strong>Fleetvision Data (FVD)</strong>
-        <ul>
-          <li>Designed and implemented a lambda architecture for scalable ingestion, real-time processing, and batch analytics of vehicle data.</li>
-          <li>Used Apache Storm for streaming, real-time event processing; Kafka for high-throughput ingestion; Elasticsearch and PostGIS for storage and geospatial search.</li>
-          <li>Built and maintained the “Weatherman” orchestration system to coordinate dynamic data reprocessing for map updates and QA.</li>
-          <li>Added dynamic reprocessing pipelines to rapidly update maps and analytics as new data arrives.</li>
-          <li>Maintained a Jenkins + Ansible CI/CD pipeline for seamless deployment and testing.</li>
-          <li>Supported downstream projects including Fleetvision 2, Spotcam Monitor, and HT-Route Creator.</li>
-        </ul>
-        <p><strong>Technologies:</strong> Python, Apache Storm, Kafka, Elasticsearch, PostgreSQL, PostGIS, Jenkins, Ansible</p>
-      </li>
-      <li>
-        <strong>ADAS Prototyping</strong>
-        <ul>
-          <li>Developed proof-of-concept pipelines for Advanced Driver Assistance Systems (ADAS) using real-time sensor data.</li>
-          <li>Integrated Python-based processing with ROS for rapid prototyping of perception and localization features.</li>
-        </ul>
-        <p><strong>Technologies:</strong> Python, ROS</p>
-      </li>
-      <li>
-        <strong>HT4: Next-Generation Mapping Rig</strong>
-        <ul>
-          <li>Collaborated with hardware teams to integrate JPEG-compressed sensor streams captured via FPGA-based encoder boards.</li>
-          <li>Designed software abstraction layers for efficient stream handling and metadata tagging.</li>
-          <li>Coordinated testing across embedded and backend teams to ensure reliable cloud ingestion.</li>
-        </ul>
-        <p><strong>Technologies:</strong> Embedded Systems, FPGA, Python</p>
-      </li>
-      <li>
-        <strong>Corporate Collaborations</strong>
-        <ul>
-          <li>Worked with Intel, Nvidia, Audi, and Mercedes-Benz to deliver sensor-to-cloud integrations for autonomous driving and ADAS.</li>
-          <li>Coordinated cross-company engineering efforts for real-time data collection, edge-to-cloud communication, and map building.</li>
-        </ul>
-        <p><strong>Skills:</strong> Cross-company Collaboration, Real-time Systems, Autonomous Driving</p>
-      </li>
-      <li>
-        <strong>Inventory Management System</strong>
-        <ul>
-          <li>Designed and built a system to track hardware components using QR codes for rapid inventory scanning and auditing.</li>
-          <li>Enabled real-time visibility into deployment stock and component usage across the fleet.</li>
-        </ul>
-        <p><strong>Technologies:</strong> Python, Flask</p>
-      </li>
-	    </ul>
-	  </li>
-	  <li>
-	    <strong>Sonobi</strong>
-	    <ul>
-	      <li>
-	        <strong>Dynamix</strong>
-	        <ul>
-	          <li>Developed an advanced web scraping and automation framework to collect bid pricing and market data across external platforms.</li>
-	          <li>Leveraged Python, BeautifulSoup, and Requests for HTML parsing and API interaction.</li>
-	          <li>Employed Wireshark and diagnostic tools to reverse engineer and validate undocumented APIs.</li>
-	        </ul>
-	      </li>
-	      <li>
-	        <strong>Warehouser</strong>
-	        <ul>
-	          <li>Built a data warehousing pipeline to aggregate impression-level data across campaigns.</li>
-	          <li>Designed data models to account for 5–10 log events per impression, improving granularity of reporting and optimization.</li>
-	          <li>Used PostgreSQL and Python for ETL, supported by robust logging and validation pipelines.</li>
-	        </ul>
-	      </li>
-	      <li>
-	        <strong>Probabilistic Group Overlap Estimation</strong>
-	        <ul>
-	          <li>Designed a system to estimate overlap between large user groups using probabilistic data structures.</li>
-	          <li>Combined HyperLogLog and MinHash sketches to approximate intersections on ingestion for efficient lookups.</li>
-	          <li>Used Python and NumPy, with extensive unit testing to ensure statistical confidence bounds.</li>
-	        </ul>
-	      </li>
-	    </ul>
-	    <p><strong>Technologies:</strong> Python, BeautifulSoup, Requests, PostgreSQL, HyperLogLog, MinHash, NumPy, Wireshark</p>
-	  </li>
-	  <li>
-	    <strong>Neher Data Systems</strong>
-	    <ul>
-	      <li>
-	        <h4>NJ State Campaign Dashboard</h4>
-	        <ul>
-	          <li>Developed and deployed a political data dashboard used by the NJ state campaign team to track canvassing progress, voter targeting, and engagement metrics in real-time.</li>
-	          <li>Integrated location-based visualizations using Leaflet and D3 to represent outreach efforts across the state.</li>
-	          <li>Built a custom backend with Flask and PostgreSQL, including voter file ingestion and address normalization routines.</li>
-	        </ul>
-	        <p><strong>Technologies:</strong> Python, Flask, PostgreSQL, Leaflet, D3.js, Docker</p>
-	      </li>
-	      <li>
-	        <h4>Ghost Hunter</h4>
-	        <ul>
-	          <li>Created an iOS-based augmented reality game for ghost hunting using Apple's ARKit and CoreLocation APIs.</li>
-	          <li>Added in-app purchases to unlock premium features including real-time AWS Lambda integration for AI-generated ghost models.</li>
-	          <li>Handled client-server communication and game state sync using Firebase.</li>
-	        </ul>
-	        <p><strong>Technologies:</strong> Swift, ARKit, CoreLocation, Firebase, AWS Lambda, StoreKit</p>
-	      </li>
-	      <li>
-	        <h4>Transit Authority Train Project (Bid Not Selected)</h4>
-	        <ul>
-	          <li>Partnered with the New Jersey Transit Authority to prototype a system for monitoring <strong>passenger and operator behavior</strong> using <strong>RTSP video streams</strong> from onboard train cameras.</li>
-	          <li>Developed a <strong>proof-of-concept ingestion pipeline</strong> and <strong>dashboard mockup</strong> to demonstrate potential for <strong>real-time safety analytics</strong>.</li>
-	          <li>Explored detection of behaviors such as <strong>driver distraction</strong>, <strong>passenger incidents</strong>, and <strong>unauthorized access</strong> using <strong>AWS Rekognition</strong> and <strong>SageMaker</strong> for model experimentation.</li>
-	          <li>Delivered an early prototype capable of <strong>processing multiple RTSP feeds</strong> and visualizing key events, supporting bid proposal development.</li>
-	          <li>Designed to run in containerized environments leveraging <strong>AWS Elastic Container Service (ECS)</strong> for orchestration and scalability.</li>
-	          <li>Leveraged <strong>Amazon Keyspaces</strong> for scalable NoSQL storage of video event metadata and <strong>Amazon S3</strong> for snapshot archiving and training datasets.</li>
-	        </ul>
-	        <p><strong>Technologies:</strong> Flask, OpenCV, RTSP, Docker, AWS Rekognition, AWS SageMaker, AWS ECS, Amazon Keyspaces, Amazon S3, React (mockup), PostgreSQL</p>
-	      </li>
-	    </ul>
-	  </li>
-	</ul>
+	<!-- Uber Projects -->
+	## Uber
+	### Navigation
+	- Contributed to one of Uber’s largest backend services (approximately 10,000 nodes per data center), powering all routing and mapping across Uber apps.
+	- Introduced support for off-route cross-street links to the route object to improve on-device map matching, reducing average off-route detection time from several minutes to seconds in challenging urban scenarios.
+	- Added support in the navigation engine for treating "off-route" links with the same heuristics as on-route links; a match on an off-route link triggers rerouting faster.
+	- Wrote Python-based simulation tools to test route deviation detection at scale, increasing simulation capacity from 500 to 10,000 trips per run.
+	- Maintained the transpilation system (J2ObjC) to share Java-based routing logic with the iOS app.
+	- Participated in on-call rotations and postmortem analysis for critical failures; notably diagnosed a widespread issue caused by a GPS clock patch with an incorrect offset that affected a large number of devices, successfully isolating the root cause and coordinating a mitigation plan.
+	**Technologies**: Java, J2ObjC, Python, Android, iOS, Multiprocessing, GPS, Sensor Fusion, Map Matching, Routing Engines
+	**Skills**: Cross-functional Collaboration, Problem Solving, Stakeholder Communication, Incident Response, Project Management
+
+	### Location Platform
+	- Led the Location Platform team, increasing successful GPS + sensor data ingestion from ~80% to over 97% across global drivers.
+	- Built the foundation for GDPR-compliant location collection, later enabling features like rider-driver location sharing to improve the pickup experience (<a href="https://www.uber.com/newsroom/turning-on-the-lights/">Uber blog</a>).
+	- Ensured accurate crash detection and Uber’s “RideCheck” safety features by improving data reliability (<a href="https://www.uber.com/blog/ridecheck/">RideCheck blog</a>).
+	- Launched the ShadowMaps project to improve location precision in urban canyons using multipath-aware geospatial correction (<a href="https://www.uber.com/blog/shadowmaps/">ShadowMaps blog</a>).
+	- Oversaw Uber’s anti-location-fraud efforts, saving over $30M through improved spoofing detection and resolution workflows.
+	- Scaled the Cassandra infrastructure for location data to support global ingestion.
+	- Maintained Location Store, one of the highest QPS services at Uber, operating at “ping scale” (0.5 Hz from every active driver), processing between 2–10 million QPS.
+	**Technologies**: Python, Cassandra, Kafka, Thrift, H3, S2, Protobuf, Distributed Systems, Real-Time Location, Privacy Compliance, Geospatial Analytics
+	**Skills**: Leadership, Project Management, Privacy Compliance, Stakeholder Communication, Agile Methodology
+
+	### Python Platform
+	- Founding engineer for Python Platform team; supported Python development across Uber Engineering and Data Science orgs.
+	- Provided mentorship and Slack-based office hours to engineers company-wide for debugging, performance tuning, and compatibility issues.
+	- Led Uber’s Python 2 to 3 migration; created dependency graph for all microservices, prioritized and updated top 200 dependencies impacting &gt;90% of production services.
+	- Major contributor to <a href="https://github.com/uber/tchannel-python">tchannel-python</a>, an open source Tornado-based Thrift RPC transport library.
+	**Technologies**: Python 2.7–3.x, Tornado, TChannel, Thrift, Dependency Management, Refactoring, Distributed Systems, Open Source Collaboration
+	**Skills**: Mentorship, Technical Leadership, Cross-functional Collaboration, Refactoring, Change Management
+
+	### Postmates Integration
+	- Maintained all legacy Postmates systems during the integration phase following the acquisition, including extended on-call support to ensure service continuity.
+	- Contributed to integration of Postmates customer identity data to support data deletion for users who had not yet linked their Postmates and Uber accounts.
+	- Worked with Go and Uber's internal schemaless datastore to manage identity and compliance data flows.
+	**Technologies**: Go, Schemaless, Identity Systems, Data Deletion Compliance, System Integration, Legacy System Maintenance
+	**Skills**: System Integration, Stakeholder Communication, Compliance, Incident Response, Project Management
+
+	<!-- Postmates Projects -->
+	## Postmates
+	### Python 2 to 3 Migration at Scale in Production
+	- Led Python 2 to 3 migration for Postmates' monorepo, ensuring compatibility across a large, interdependent codebase.
+	- Enhanced distributed test infrastructure by orchestrating test jobs across Kubernetes pods, reducing average CI build times from 40–50 minutes to 10–15 minutes.
+	- Worked closely with infrastructure and observability teams to improve deployment quality, integrating tools like Envoy for traffic proxying and OpenTelemetry for tracing instrumentation.
+	- Contributed to debugging and refinement of production microservices in high-traffic, latency-sensitive systems.
+	- Participated in deep on-call rotations and postmortem investigations, contributing to root cause analysis and service reliability improvements across production infrastructure.
+	**Technologies**: Python 2.7–3.x, Kubernetes, Docker, Envoy, OpenTelemetry, Prometheus, Grafana, GitLab CI, Monorepo Architecture, Distributed Systems, PostgreSQL, pgpool-II, PgBouncer, Django
+	**Skills**: Project Management, Cross-functional Collaboration, Agile Methodology, Incident Response, Mentorship
+
+	<!-- HERE Technologies Projects -->
+	## HERE
+	### Leadership and Team Building
+	- Built and scaled a high-performing engineering team from 2 to 15, structuring around backend, frontend, embedded, mobile, and DevOps domains.
+	- Led team across multiple focus areas including in-car platforms, API design, infrastructure, and visualization.
+	- Provided architectural leadership and technical mentorship across projects while acting as people manager.
+	- Supported efforts to obtain ISO 9001 certification across the organization, including quality management system implementation and process documentation.
+	- Facilitated Agile engineering practices including Scrum of Scrums, quarterly release trains, and cross-team planning ceremonies to drive delivery and iterative improvement.
+	**Technologies**: Team Building, Agile, Lean Six Sigma, ISO Certification
+	**Skills**: Leadership, Team Building, Agile Methodology, Organizational Scaling, Mentorship, Project Management
+
+	### Fleetvision 2
+	- Developed Tornado-based backend APIs to interface with the in-vehicle software stack.
+	- Built a React-based frontend for tablet interface used by fleet drivers and engineers to monitor collection progress and manage configurations.
+	- Integrated real-time vehicle data including GPS, IMU, and camera telemetry for high-fidelity fleet tracking.
+	- Deployment pipeline built using Jenkins and Ansible to support over-the-air software updates and remote diagnostics.
+	**Technologies**: Python, React, Tornado, PostgreSQL, SQLAlchemy, PostGIS, Redis, Elasticsearch
+	**Skills**: Cross-functional Collaboration, Agile Methodology, Stakeholder Communication, Project Management
+
+	### Fleetvision Data (FVD)
+	- Designed and implemented a lambda architecture for scalable ingestion, real-time processing, and batch analytics of vehicle data.
+	- Used Apache Storm for streaming, real-time event processing; Kafka for high-throughput ingestion; Elasticsearch and PostGIS for storage and geospatial search.
+	- Built and maintained the “Weatherman” orchestration system to coordinate dynamic data reprocessing for map updates and QA.
+	- Added dynamic reprocessing pipelines to rapidly update maps and analytics as new data arrives.
+	- Maintained a Jenkins + Ansible CI/CD pipeline for seamless deployment and testing.
+	- Supported downstream projects including Fleetvision 2, Spotcam Monitor, and HT-Route Creator.
+	**Technologies**: Python, Apache Storm, Kafka, Elasticsearch, PostgreSQL, PostGIS, Jenkins, Ansible
+	**Skills**: Project Management, Agile Methodology, Mentorship, Cross-functional Collaboration
+
+	### ADAS Prototyping
+	- Developed proof-of-concept pipelines for Advanced Driver Assistance Systems (ADAS) using real-time sensor data.
+	- Integrated Python-based processing with ROS for rapid prototyping of perception and localization features.
+	**Technologies**: Python, ROS
+	**Skills**: Rapid Prototyping, Cross-functional Collaboration, Project Management
+
+	### HT4: Next-Generation Mapping Rig
+	- Collaborated with hardware teams to integrate JPEG-compressed sensor streams captured via FPGA-based encoder boards.
+	- Designed software abstraction layers for efficient stream handling and metadata tagging.
+	- Coordinated testing across embedded and backend teams to ensure reliable cloud ingestion.
+	**Technologies**: Embedded Systems, FPGA, Python
+	**Skills**: Cross-functional Collaboration, Stakeholder Communication, Project Management
+
+	### Corporate Collaborations
+	- Worked with Intel, Nvidia, Audi, and Mercedes-Benz to deliver sensor-to-cloud integrations for autonomous driving and ADAS.
+	- Coordinated cross-company engineering efforts for real-time data collection, edge-to-cloud communication, and map building.
+	**Technologies**: Real-time Systems, Autonomous Driving, Sensor Integration
+	**Skills**: Cross-company Collaboration, Stakeholder Communication, Project Management
+
+	### Inventory Management System
+	- Designed and built a system to track hardware components using QR codes for rapid inventory scanning and auditing.
+	- Enabled real-time visibility into deployment stock and component usage across the fleet.
+	**Technologies**: Python, Flask
+	**Skills**: Project Management, Agile Methodology, Stakeholder Communication
+
+	<!-- Sonobi Projects -->
+	## Sonobi
+	### Dynamix
+	- Developed an advanced web scraping and automation framework to collect bid pricing and market data across external platforms.
+	- Leveraged Python, BeautifulSoup, and Requests for HTML parsing and API interaction.
+	- Employed Wireshark and diagnostic tools to reverse engineer and validate undocumented APIs.
+	**Technologies**: Python, BeautifulSoup, Requests, Wireshark
+	**Skills**: Problem Solving, Agile Methodology, Stakeholder Communication, Cross-functional Collaboration
+
+	### Warehouser
+	- Built a data warehousing pipeline to aggregate impression-level data across campaigns.
+	- Designed data models to account for 5–10 log events per impression, improving granularity of reporting and optimization.
+	- Used PostgreSQL and Python for ETL, supported by robust logging and validation pipelines.
+	**Technologies**: Python, PostgreSQL
+	**Skills**: Data Modeling, Project Management, Agile Methodology
+
+	### Probabilistic Group Overlap Estimation
+	- Designed a system to estimate overlap between large user groups using probabilistic data structures.
+	- Combined HyperLogLog and MinHash sketches to approximate intersections on ingestion for efficient lookups.
+	- Used Python and NumPy, with extensive unit testing to ensure statistical confidence bounds.
+	**Technologies**: Python, HyperLogLog, MinHash, NumPy
+	**Skills**: Statistical Analysis, Problem Solving, Agile Methodology
+
+	<!-- Neher Data Systems Projects -->
+	## Neher Data Systems
+	### NJ State Campaign Dashboard
+	- Developed and deployed a political data dashboard used by the NJ state campaign team to track canvassing progress, voter targeting, and engagement metrics in real-time.
+	- Integrated location-based visualizations using Leaflet and D3 to represent outreach efforts across the state.
+	- Built a custom backend with Flask and PostgreSQL, including voter file ingestion and address normalization routines.
+	**Technologies**: Python, Flask, PostgreSQL, Leaflet, D3.js, Docker
+	**Skills**: Project Management, Stakeholder Communication, Agile Methodology
+
+	### Ghost Hunter
+	- Created an iOS-based augmented reality game for ghost hunting using Apple's ARKit and CoreLocation APIs.
+	- Added in-app purchases to unlock premium features including real-time AWS Lambda integration for AI-generated ghost models.
+	- Handled client-server communication and game state sync using Firebase.
+	**Technologies**: Swift, ARKit, CoreLocation, Firebase, AWS Lambda, StoreKit
+	**Skills**: Cross-functional Collaboration, Agile Methodology, Project Management
+
+	### Transit Authority Train Project (Bid Not Selected)
+	- Partnered with the New Jersey Transit Authority to prototype a system for monitoring <strong>passenger and operator behavior</strong> using <strong>RTSP video streams</strong> from onboard train cameras.
+	- Developed a <strong>proof-of-concept ingestion pipeline</strong> and <strong>dashboard mockup</strong> to demonstrate potential for <strong>real-time safety analytics</strong>.
+	- Explored detection of behaviors such as <strong>driver distraction</strong>, <strong>passenger incidents</strong>, and <strong>unauthorized access</strong> using <strong>AWS Rekognition</strong> and <strong>SageMaker</strong> for model experimentation.
+	- Delivered an early prototype capable of <strong>processing multiple RTSP feeds</strong> and visualizing key events, supporting bid proposal development.
+	- Designed to run in containerized environments leveraging <strong>AWS Elastic Container Service (ECS)</strong> for orchestration and scalability.
+	- Leveraged <strong>Amazon Keyspaces</strong> for scalable NoSQL storage of video event metadata and <strong>Amazon S3</strong> for snapshot archiving and training datasets.
+	**Technologies**: Flask, OpenCV, RTSP, Docker, AWS Rekognition, AWS SageMaker, AWS ECS, Amazon Keyspaces, Amazon S3, React (mockup), PostgreSQL
+	**Skills**: Project Management, Stakeholder Communication, Agile Methodology, Cross-functional Collaboration
 	<h2>Experience</h2>
 	<h3>Urbn</h3>
 	<p><strong>Software Engineer</strong><br><em>September 2024 - Present</em> </p>
