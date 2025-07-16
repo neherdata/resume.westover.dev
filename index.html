@@ -38,20 +38,113 @@
   </ul>
 	<h2>Projects</h2>
 	<ul>
-	  <li><strong>Uber – Location Platform & Navigation:</strong> Managed the Location Platform team, driving improvements that increased location data capture from 80% to 97%, supporting compliance and enabling features like RideCheck. Led development of Shadow Maps, saving $30M+ in location fraud. Enhanced off-route detection and simulation tooling in Uber's navigation stack, reducing detection latency significantly via infrastructure shared across teams and services including Roadrunner and the mobile apps.</li>
-	  <li><strong>Uber – Python Platform:</strong> Founding member of the Python Platform team. Spearheaded Python 2 to 3 migration at Uber, including rebuilding top dependencies. Major contributor to tchannel-python open source project.</li>
-	  <li><strong>Postmates:</strong> Migrated Python monorepo from 2 to 3. Improved test infrastructure using distributed testing across Kubernetes, reducing build times from 40–50 min to 10–15 min. Used Envoy and blue-green deployments with Prometheus, Grafana, and OpenTelemetry for observability.</li>
-	  <li><strong>HERE – Capture Systems:</strong> Built team from 2 to 15 and led efforts on capture system software, including:
+	  <li>
+	    <strong>Uber</strong>
 	    <ul>
-	      <li><strong>FleetVision 2:</strong> Replacement for legacy Ruby on Rails system. Designed Tornado-based APIs and React frontend; managed deployment with Ansible and Jenkins.</li>
-	      <li><strong>Spot Cam:</strong> Prototype mapping/ADAS rig. Jenkins + Ansible provisioning and OTA updates; early Jetson/NVIDIA deployment with real-time detection pipelines.</li>
-	      <li><strong>HT4 (HERE True 4):</strong> Led hardware/software integration effort for new generation mapping rig. Redesigned compute architecture (FPGA-based JPEG compression, GPU integration) with simplified service model and improved reliability.</li>
-	      <li><strong>Autonomous Driving Collab:</strong> Key contributor to cross-company efforts with Intel, Nvidia, Audi, Mercedes; domain expert in sensor-to-cloud systems and fleet telemetry ingestion.</li>
-	      <li><strong>Stream Processing / Storm:</strong> Designed real-time analytics for mapping fleet using Apache Storm. Built orchestration node “Weatherman” and supporting microservices.</li>
+	      <li>
+	        <strong>Navigation</strong>
+	        <ul>
+	          <li>Contributed to one of Uber’s largest backend services (approximately 10,000 nodes per data center), powering all routing and mapping across Uber apps.</li>
+	          <li>Introduced support for off-route cross-street links to the route object to improve on-device map matching, reducing average off-route detection time from several minutes to seconds in challenging urban scenarios.</li>
+	          <li>Added support in the navigation engine for treating "off-route" links with the same heuristics as on-route links; a match on an off-route link triggers rerouting faster.</li>
+	          <li>Wrote Python-based simulation tools to test route deviation detection at scale, increasing simulation capacity from 500 to 10,000 trips per run.</li>
+	          <li>Maintained the transpilation system (J2ObjC) to share Java-based routing logic with the iOS app.</li>
+	          <li>Participated in on-call rotations and postmortem analysis for critical failures; notably diagnosed a widespread issue caused by a GPS clock patch with an incorrect offset that affected a large number of devices, successfully isolating the root cause and coordinating a mitigation plan.</li>
+	          <li><strong>Technologies:</strong> Java, J2ObjC, Python, Android, iOS, Multiprocessing, GPS, Sensor Fusion, Map Matching, Routing Engines</li>
+	        </ul>
+	      </li>
+	      <li>
+	        <strong>Location Platform</strong>
+	        <ul>
+	          <li>Led the Location Platform team, increasing successful GPS + sensor data ingestion from ~80% to over 97% across global drivers.</li>
+	          <li>Built the foundation for GDPR-compliant location collection, later enabling features like rider-driver location sharing to improve the pickup experience (<a href="https://www.uber.com/newsroom/turning-on-the-lights/">Uber blog</a>).</li>
+	          <li>Ensured accurate crash detection and Uber’s “RideCheck” safety features by improving data reliability (<a href="https://www.uber.com/blog/ridecheck/">RideCheck blog</a>).</li>
+	          <li>Launched the ShadowMaps project to improve location precision in urban canyons using multipath-aware geospatial correction (<a href="https://www.uber.com/blog/shadowmaps/">ShadowMaps blog</a>).</li>
+	          <li>Oversaw Uber’s anti-location-fraud efforts, saving over $30M through improved spoofing detection and resolution workflows.</li>
+	          <li>Scaled the Cassandra infrastructure for location data to support global ingestion.</li>
+	          <li>Maintained Location Store, one of the highest QPS services at Uber, operating at “ping scale” (0.5 Hz from every active driver), processing between 2–10 million QPS.</li>
+	          <li><strong>Technologies:</strong> Python, Cassandra, Kafka, Thrift, H3, S2, Protobuf, Distributed Systems, Real-Time Location, Privacy Compliance, Geospatial Analytics</li>
+	        </ul>
+	      </li>
+	      <li>
+	        <strong>Python Platform</strong>
+	        <ul>
+	          <li>Founding engineer for Python Platform team; supported Python development across Uber Engineering and Data Science orgs.</li>
+	          <li>Provided mentorship and Slack-based office hours to engineers company-wide for debugging, performance tuning, and compatibility issues.</li>
+	          <li>Led Uber’s Python 2 to 3 migration; created dependency graph for all microservices, prioritized and updated top 200 dependencies impacting &gt;90% of production services.</li>
+	          <li>Major contributor to <a href="https://github.com/uber/tchannel-python">tchannel-python</a>, an open source Tornado-based Thrift RPC transport library.</li>
+	          <li><strong>Technologies:</strong> Python 2.7–3.x, Tornado, TChannel, Thrift, Dependency Management, Refactoring, Distributed Systems, Open Source Collaboration</li>
+	        </ul>
+	      </li>
+	      <li>
+	        <strong>Postmates Integration</strong>
+	        <ul>
+	          <li>Maintained all legacy Postmates systems during the integration phase following the acquisition, including extended on-call support to ensure service continuity.</li>
+	          <li>Contributed to integration of Postmates customer identity data to support data deletion for users who had not yet linked their Postmates and Uber accounts.</li>
+	          <li>Worked with Go and Uber's internal schemaless datastore to manage identity and compliance data flows.</li>
+	          <li><strong>Technologies:</strong> Go, Schemaless, Identity Systems, Data Deletion Compliance, System Integration, Legacy System Maintenance</li>
+	        </ul>
+	      </li>
 	    </ul>
 	  </li>
-	  <li><strong>Sonobi:</strong> Created “Warehouser” data orchestration system to manage up to 5–10 events per impression. Built web scraping infrastructure (BeautifulSoup, Requests, Wireshark) and probabilistic group overlap estimation using MinHash and HyperLogLog. Led load/chaos testing and walk-out from AWS to on-prem (SaltStack), reducing cost per impression by order of magnitude.</li>
-	  <li><strong>Neher Data Systems:</strong> Architected end-to-end cloud microservices for video analytics (ECS, S3, Lambda). Built and released object detection app “GhostHunter” on mobile (with IAP to use AWS-hosted models). Provided tech leadership for client contracts and internal tooling.</li>
+	  <li>
+	    <strong>Postmates</strong>
+	    <ul>
+	      <li>
+	        <strong>Python 2 to 3 migration at scale in production</strong>
+	        <ul>
+	          <li>Led Python 2 to 3 migration for Postmates' monorepo, ensuring compatibility across a large, interdependent codebase.</li>
+	          <li>Enhanced distributed test infrastructure by orchestrating test jobs across Kubernetes pods, reducing average CI build times from 40–50 minutes to 10–15 minutes.</li>
+	          <li>Worked closely with infrastructure and observability teams to improve deployment quality, integrating tools like Envoy for traffic proxying and OpenTelemetry for tracing instrumentation.</li>
+	          <li>Contributed to debugging and refinement of production microservices in high-traffic, latency-sensitive systems.</li>
+	          <li>Participated in deep on-call rotations and postmortem investigations, contributing to root cause analysis and service reliability improvements across production infrastructure.</li>
+	          <li><strong>Technologies:</strong> Python 2.7–3.x, Kubernetes, Docker, Envoy, OpenTelemetry, Prometheus, Grafana, GitLab CI, Monorepo Architecture, Distributed Systems, PostgreSQL, pgpool-II, PgBouncer, Django</li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    <strong>HERE Technologies</strong>
+	    <ul>
+	      <li>
+	        <strong>Capture Systems</strong>
+	        <ul>
+	          <li>Grew Capture Systems team from 2 to 15 engineers.</li>
+	          <li>Led software/firmware efforts on mapping hardware across multiple vehicle platforms.</li>
+	          <li><strong>FleetVision 2:</strong> Tornado-based APIs and React frontend; deployed via Ansible and Jenkins.</li>
+	          <li><strong>Spot Cam:</strong> Real-time Jetson pipeline with OTA updates using Jenkins + Ansible.</li>
+	          <li><strong>HT4:</strong> Hardware/software integration for JPEG-compressed sensor streams via FPGA.</li>
+	          <li><strong>Autonomous Driving Collab:</strong> Led sensor-to-cloud fleet telemetry systems with Intel, Nvidia, Audi, Mercedes.</li>
+	          <li><strong>Stream Processing:</strong> Apache Storm–based real-time analytics and microservices via “Weatherman”.</li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    <strong>Sonobi</strong>
+	    <ul>
+	      <li>
+	        <ul>
+	          <li>Created “Warehouser” orchestration for 5–10 events per ad impression.</li>
+	          <li>Web scraping using BeautifulSoup, Requests, Wireshark; no JS spoofing.</li>
+	          <li>Implemented probabilistic group overlap with MinHash and HyperLogLog.</li>
+	          <li>Led load/chaos testing; walked out of AWS to SaltStack-managed on-prem, cutting cost per impression by 10×.</li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    <strong>Neher Data Systems</strong>
+	    <ul>
+	      <li>
+	        <ul>
+	          <li>Architected end-to-end cloud microservices for video analytics using ECS, Lambda, S3.</li>
+	          <li>Released GhostHunter mobile app with in-app purchases to invoke AWS Lambda models.</li>
+	          <li>Provided technical leadership across client projects and internal ML pipelines.</li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </li>
 	</ul>
 	<h2>Experience</h2>
 	<h3>Urbn</h3>
